@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRTY Search</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRTY Search</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Tabs bar -->
-<div id="tabs-bar">
-  <div class="tab active" data-page="search">PRTY Search</div>
-</div>
-
-<!-- Shortcuts -->
-<div id="shortcuts">
-  <div class="shortcut" data-page="games">
-    <img src="assets/icons/games.png" alt="Games"> PRTY Games
-  </div>
-  <div class="shortcut" data-page="cinema">
-    <img src="assets/icons/cinema.png" alt="Cinema"> PRTY Cinema
-  </div>
-  <div class="shortcut" data-page="music">
-    <img src="assets/icons/music.png" alt="Music"> PRTY Music
-  </div>
-</div>
-
-<!-- Pages -->
-<div id="pages">
-  <div class="page" id="search-page">
-    <form id="search-form">
-      <input type="text" id="search-input" placeholder="Search PRTY..." autofocus>
-      <button type="submit">Search</button>
-    </form>
-    <div id="search-results"></div>
+  <!-- Tabs Bar -->
+  <div id="tabs-bar">
+    <div class="tab active">PRTY Home</div>
+    <div class="tab">Games</div>
+    <div class="tab">Cinema</div>
+    <div class="tab">Music</div>
+    <button id="new-tab">+</button>
   </div>
 
-  <div class="page" id="games-page">
+  <!-- Search Section -->
+  <div id="search-section">
+    <input type="text" id="search-bar" placeholder="Search PRTY...">
+    <button id="search-btn">Search</button>
+
+    <!-- Shortcuts -->
+    <div id="shortcuts">
+      <div class="shortcut" data-link="games.html">
+        <img src="assets/games-icon.png" alt="Games">
+        <span>PRTY Games</span>
+      </div>
+      <div class="shortcut" data-link="movies.html">
+        <img src="assets/cinema-icon.png" alt="Cinema">
+        <span>PRTY Cinema</span>
+      </div>
+      <div class="shortcut" data-link="music.html">
+        <img src="assets/music-icon.png" alt="Music">
+        <span>PRTY Music</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Party Confetti Canvas -->
+  <canvas id="confetti"></canvas>
+
+  <!-- Games Section -->
+  <div id="games-section">
     <h2>PRTY Games</h2>
-    <p>Coming soon...</p>
+    <div class="games-grid">
+      <!-- Example placeholder cards -->
+      <div class="game-card" data-link="about:blank">
+        <img src="assets/game1.png" alt="Game 1">
+        <p>Game 1</p>
+      </div>
+      <div class="game-card" data-link="about:blank">
+        <img src="assets/game2.png" alt="Game 2">
+        <p>Game 2</p>
+      </div>
+      <div class="game-card" data-link="about:blank">
+        <img src="assets/game3.png" alt="Game 3">
+        <p>Game 3</p>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
   </div>
 
-  <div class="page" id="cinema-page">
-    <h2>PRTY Cinema</h2>
-    <p>Coming soon...</p>
-  </div>
-
-  <div class="page" id="music-page">
-    <h2>PRTY Music</h2>
-    <p>Coming soon...</p>
-  </div>
-</div>
-
-<!-- Settings -->
-<a href="settings.html" id="settings-btn">⚙️ Settings</a>
-
-<script src="js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
