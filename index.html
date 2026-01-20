@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRTY Search</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Tabs bar -->
+<div id="tabs-bar">
+  <div class="tab active" data-page="search">PRTY Search</div>
+</div>
+
+<!-- Shortcuts -->
+<div id="shortcuts">
+  <div class="shortcut" data-page="games">
+    <img src="assets/icons/games.png" alt="Games"> PRTY Games
+  </div>
+  <div class="shortcut" data-page="cinema">
+    <img src="assets/icons/cinema.png" alt="Cinema"> PRTY Cinema
+  </div>
+  <div class="shortcut" data-page="music">
+    <img src="assets/icons/music.png" alt="Music"> PRTY Music
+  </div>
+</div>
+
+<!-- Pages -->
+<div id="pages">
+  <div class="page" id="search-page">
+    <form id="search-form">
+      <input type="text" id="search-input" placeholder="Search PRTY..." autofocus>
+      <button type="submit">Search</button>
+    </form>
+    <div id="search-results"></div>
+  </div>
+
+  <div class="page" id="games-page">
+    <h2>PRTY Games</h2>
+    <p>Coming soon...</p>
+  </div>
+
+  <div class="page" id="cinema-page">
+    <h2>PRTY Cinema</h2>
+    <p>Coming soon...</p>
+  </div>
+
+  <div class="page" id="music-page">
+    <h2>PRTY Music</h2>
+    <p>Coming soon...</p>
+  </div>
+</div>
+
+<!-- Settings -->
+<a href="settings.html" id="settings-btn">⚙️ Settings</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
