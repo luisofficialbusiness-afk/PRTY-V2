@@ -1,15 +1,102 @@
-/* Reset & base */
-body, html { margin:0; padding:0; font-family: Arial, sans-serif; background:#f5f5f5; }
-#tabs-bar { display:flex; background:#222; color:#fff; padding:5px; }
-.tab { padding:10px 20px; cursor:pointer; }
-.tab.active { background:#444; border-radius:5px 5px 0 0; }
-#shortcuts { display:flex; justify-content:center; margin:20px; gap:15px; }
-.shortcut { display:flex; flex-direction:column; align-items:center; cursor:pointer; transition:0.2s; }
-.shortcut img { width:50px; height:50px; }
-.shortcut:hover { transform:scale(1.1); }
-.page { display:none; padding:20px; }
-.page.active { display:block; }
-#settings-btn { position:fixed; bottom:15px; right:15px; font-size:24px; text-decoration:none; color:#222; background:#fff; padding:10px; border-radius:50%; box-shadow:0 0 5px rgba(0,0,0,0.2);}
-#search-form { display:flex; justify-content:center; margin-top:50px; gap:5px; }
-#search-input { padding:10px; width:60%; font-size:16px; }
-#search-results { margin-top:20px; text-align:center; }
+/* General Page */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Tabs Bar */
+#tabs-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+  padding: 5px 10px;
+}
+.tab {
+  padding: 5px 15px;
+  margin-right: 5px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tab.active {
+  background: #fff;
+  color: #ff5f6d;
+}
+#new-tab {
+  margin-left: auto;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Search Section */
+#search-section {
+  text-align: center;
+  margin: 30px 0;
+}
+#search-bar {
+  width: 60%;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+}
+#search-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #fff;
+  color: #ff5f6d;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Shortcuts */
+#shortcuts {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.shortcut:hover { transform: scale(1.1); }
+.shortcut img {
+  width: 50px;
+  height: 50px;
+}
+.shortcut span {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Games Section */
+#games-section {
+  padding: 20px;
+  text-align: center;
+}
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+  gap: 20px;
+  justify-items: center;
+}
+.game-card {
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.game-card:hover { transform: scale(1.05); }
+.game-card img { width: 100%; border-radius: 10px; }
+.game-card p { margin: 5px 0 0 0; }
